@@ -764,3 +764,30 @@ h3 {
   width: 88% !important;
   margin: 4px auto 0 !important;
 }
+/* スマホ：TOP画面の枠が縦に伸びすぎるのを防ぐ */
+@media (max-width: 600px) {
+  .app {
+    min-height: 100svh;
+    padding: 12px;
+    place-items: start center;
+  }
+
+  .card {
+    min-height: auto;
+    border-radius: 22px;
+  }
+
+  .screen {
+    min-height: auto;
+  }
+
+  #titleScreen {
+    min-height: auto;
+    padding: 44px 18px 36px;
+  }
+
+  .top-image-wrap {
+    width: min(420px, 94%);
+    margin: 0 auto;
+  }
+}
