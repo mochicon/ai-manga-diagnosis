@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>あなたの物語クリエイター適性診断</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section class="card">
+      <button id="soundButton" class="sound-button" type="button" aria-pressed="false">BGM OFF</button>
+
+      <div class="art" aria-hidden="true">
+        <div class="star star-one"></div>
+        <div class="star star-two"></div>
+        <div class="star star-three"></div>
+        <div class="star star-four"></div>
+        <div class="star star-five"></div>
+        <div class="star star-six"></div>
+        <div class="star star-seven"></div>
+        <div class="star star-eight"></div>
+      </div>
+
+      <section id="titleScreen" class="screen is-active">
+        <h1 id="siteTitle" class="sr-only"></h1>
+        <p id="siteSubtitle" class="sr-only"></p>
+        <div class="top-image-wrap">
+          <button id="startButton" class="top-image-button" type="button" aria-label="診断をはじめる">
+            <img src="assets/top.png" alt="3分でできる あなたのAIマンガの可能性診断 物語を届ける力をそっと見つける 占う">
+          </button>
+          <div id="topToast" class="top-toast" aria-live="polite" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section id="openingScreen" class="screen reading-screen">
+        <p class="eyebrow">Opening</p>
+        <button id="quickQuestionStartButton" class="quick-start-button opening-quick-start-button" type="button">すぐ占う</button>
+        <div class="opening-manga-list" aria-label="診断の紹介マンガ">
+          <img src="assets/manga1p.jpg" alt="">
+          
+        </div>
+        <div id="openingText" class="copy"></div>
+        <button id="questionStartButton" class="primary-button" type="button"></button>
+      </section>
+
+      <section id="quizScreen" class="screen">
+        <div class="progress">
+          <span id="questionCount">1 / 12</span>
+          <div class="progress-track">
+            <div id="progressBar" class="progress-bar"></div>
+          </div>
+        </div>
+        <p id="questionLabel" class="question-label"></p>
+        <h2 id="questionText"></h2>
+        <div id="answerList" class="answers"></div>
+      </section>
+
+      <section id="loadingScreen" class="screen loading-screen">
+        <p class="eyebrow">Reading</p>
+        <video class="loading-video" src="assets/loading.mp4" autoplay muted playsinline></video>
+        <div id="loadingText" class="copy"></div>
+        <button id="showResultButton" class="primary-button" type="button"></button>
+      </section>
+
+      <section id="resultScreen" class="screen result-screen">
+        <p class="eyebrow">あなたの物語タイプ</p>
+        <div id="resultImageSlot" class="result-image-slot"></div>
+        <h2 id="resultTitle"></h2>
+        <p id="resultType" class="type-name"></p>
+        <div id="resultBody" class="copy"></div>
+        <section class="result-step">
+          <h3>おすすめの一歩</h3>
+          <p id="resultStep"></p>
+        </section>
+        <button id="restartButton" class="secondary-button" type="button"></button>
+        <div class="result-manga-list">
+  <img class="result-manga" src="assets/manga03-1.jpg" alt="">
+  <img class="result-manga" src="assets/manga03-2.jpg" alt="">
+  <img class="result-manga result-manga-ending" src="assets/manga03-3.jpg" alt="">
+</div>
+        <div class="result-lp">
+          <img src="assets/LP01.jpg" alt="">
+          <img src="assets/LP02.jpg" alt="">
+        </div>
+        <a class="purchase-button" href="htmi//" aria-label="購入はこちら">
+          <img src="assets/botan.png" alt="購入はこちら">
+        </a>
+        <button id="restartButtonBottom" class="secondary-button" type="button">もう一度診断する</button>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
